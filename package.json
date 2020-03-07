@@ -1,25 +1,25 @@
 {
-  "name": "yelpington",
+  "name": "yelpington-LGrimley0525",
   "version": "1.0.0",
-  "description": "Burlington Code Academy restaurant app",
-  "main": "index.js",
+  "description": "In this project, you will pair up and work with other teams to create an online directory of restaurants in Burlington.",
+  "main": "main.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "node sanityCheck.js",
-    "start": "npx node-static ."
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BurlingtonCodeAcademy/yelpington.git"
+    "url": "git+https://github.com/BurlingtonCodeAcademy/yelpington-LGrimley0525.git"
   },
-  "author": "Burlington Code Academy",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BurlingtonCodeAcademy/yelpington/issues"
+    "url": "https://github.com/BurlingtonCodeAcademy/yelpington-LGrimley0525/issues"
   },
-  "homepage": "https://github.com/BurlingtonCodeAcademy/yelpington#readme",
-  "dependencies": {
-    "mime-types": "^2.1.18",
-    "node-static": "^0.7.11"
-  },
-  "devDependencies": {}
+  "homepage": "https://github.com/BurlingtonCodeAcademy/yelpington-LGrimley0525#readme"
 }
