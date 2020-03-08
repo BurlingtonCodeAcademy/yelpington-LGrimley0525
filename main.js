@@ -1,5 +1,5 @@
 //Setting map and selected tileLayer-----------------------------------
-let myMap = L.map('map').setView([44.4774, -73.2121], 16);
+let myMap = L.map('map').setView([44.4774, -73.2121], 15);
 
 L.tileLayer
     ('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
