@@ -1,4 +1,4 @@
-//Setting map and selected tileLayer-----------------------------------
+//Setting map and selected tileLayer----------------------------------------
 let myMap = L.map('map').setView([44.4774, -73.2121], 15);
 
 L.tileLayer
@@ -6,7 +6,7 @@ L.tileLayer
         maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
     }).addTo(myMap)
 
-//navigation bar-------------------------------
+//navigation and dropdown menu-----------------------------------------------
 
 let dropTop =document.getElementById("menu")
 
@@ -18,6 +18,27 @@ function toggleDrop (event){
         content.style.display = "inline"
     } else{content.style.display = "none"}
 }
+async function restNav(){
+    let menuList = await fetch('https://json-server.burlingtoncodeacademy.now.sh/restaurants')
+        .then((response) => {
+            return response.json()
+        })
+        .then ((jsonObj) => {
+            return jsonObj
+        })
+    menuList.forEach((post) => {
+        let id = post.id
+        let name = post.name
+        let link = document.createElement('a')
+        link.setAttribute('href','yelp/' + id)
+        let item = document.createElement('li')
+        link.textContent = name
+        item.appendChild(link)
+        content.appendChild(item)   
+    })    
+
+} 
+restNav()
 
 //pull in restaurants and print in a list on main page-----------------------------
 let listContainer = document.getElementById("post-list")
