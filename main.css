@@ -1,6 +1,8 @@
 body{
   background-color: #0F8B8D;
 }
+
+/* Header CSS------------------------------------- */
 h1{
   font-size: 60px;
   font-family: 'Cuprum', sans-serif;
@@ -15,8 +17,13 @@ h2{
   z-index: 4;
 }
 
+#food-overlay{
+  background-image: linear-gradient(rgba(255, 250, 247, 0.9),
+  rgba(255, 250, 247, 0.9)), url(Food.PNG);
+}
 
-/*General Page alignment*/
+/*General Page alignment-----------------------------*/
+
 .yelp{
   display:grid;
   grid-gap: 0.5rem;
@@ -45,23 +52,8 @@ h2{
   border: 2px black;
   margin-top: 50px;
   margin-bottom: 20px;
+  height:85%;
 }
-
-#footer{
-  grid-area: footer;
-}
-
-#sidebarList{
-  grid-area: sidebarList;
-  text-align: center;
-  margin-top: 50px;
-  font-family: 'Monda', sans-serif;
-  margin-bottom: 20px;
-  border-radius: 20px;
-  background-color:#EC9A29;
-  height: 70%;
-}
-
 #map{
   height: 100%;
   width: 100%;
@@ -74,50 +66,54 @@ h2{
   font-family: 'Monda', sans-serif;
   border-radius: 20px;
   margin-top: 50px; 
-
+  height: 158px;
 }
 
 #drop-list{
   margin-top: 50px;
-  
 }
 
+/* Sidebar CSS-------------------------------------------- */
+#sidebarList{
+  grid-area: sidebarList;
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Monda', sans-serif;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background-color:#EC9A29;
+  height: 85%;
+}
 #post-list{
   color: white;
   font-family: 'Monda', sans-serif;
   background-color:#EC9A29;
   border-radius: 20px;
-  
+  height: 80%;
 }
 #post-list > li:hover,
 li:focus-within {
-    background:#A8201A;
-    cursor: pointer;
+  background:#A8201A;
+  cursor: pointer;
 }
 
-#food-overlay{
-  background-image: linear-gradient(rgba(255, 250, 247, 0.9), rgba(255, 250, 247, 0.9)), url(Food.PNG);
-}
 /* nav bar CSS below--------------------------------*/
-
 
 a {
   text-decoration: none;
 }
 
 nav {
-    display: flex;
-    justify-content: flex-end;
-    z-index: 2;
-  
-
+  display: flex;
+  justify-content: flex-end;
+  z-index: 2;
 }
 
 ul {
   background:#A8201A;
-    list-style: none;
-    margin-top: 0;
-    padding-left: 0;
+  list-style: none;
+  margin-top: 0;
+  padding-left: 0;
 }
 
 nav li {
@@ -171,9 +167,10 @@ ul li ul li {
   width: 100%;
 }
 
-
 /* footer CSS Below ---------------------------------*/
+
 #footer {
+  grid-area: footer;
   margin: 1em 0 0 0;
   padding: 1em;
   background-color:#143642;
@@ -312,7 +309,7 @@ div#contact-info>p {
   border-radius: 85%;
 }
 
-/*Hover effect on social media icons*/
+/*Hover effect on social media icons-----------------------------------*/
 
 .fa:hover {
   opacity: 0.7;

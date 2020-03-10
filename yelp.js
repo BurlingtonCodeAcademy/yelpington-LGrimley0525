@@ -6,7 +6,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 }).addTo(myMap)
 
 
-//navigation and dropdown menu-----------------------------------------------
+//navigation with dropdown menu-----------------------------------------------
 let dropTop = document.getElementById("menu")
 
 let content = document.getElementById("drop-content")
@@ -35,7 +35,6 @@ async function restNav() {
         item.appendChild(link)
         content.appendChild(item)
     })
-
 }
 restNav()
 
@@ -50,26 +49,42 @@ let notes = document.getElementById('notes')
 let phone = document.getElementById('phone')
 let address = document.getElementById('address')
 let name = document.getElementById('restName')
+let hours = document.getElementById('hours')
+let commentSection = document.getElementById('commentSection')
+
 async function getRestData() {
     let data = await fetch(`https://json-server.burlingtoncodeacademy.now.sh/restaurants/${id}`)
         .then((response) => {
             return response.json();
         })
         .then((jsonObj) => {
-            return jsonObj
+            return jsonObj;
         })
-    name.textContent = ` ${data.name}:`    
-    notes.textContent = `What They Are Known For: ${data.notes}`
-    phone.textContent = `Call for reservations or more information at: ${data.phone}`
-    address.textContent = `Stop in at: ${data.address}`
+    name.textContent = ` ${data.name}:`
+    commentSection.textContent = `COMMENTS ABOUT THE RESTAURANT:  `
+    phone.textContent = `Call for Reservations or Questions: ${data.phone}`
+    address.textContent = `Stop in at:  ${data.address}`
+
+    //ensure proper hour display if no hours listed------------------------ 
+
+    if ('hours' in data) {
+        hours.textContent = `Hours of Operation: ${data.hours}`
+    } else { hours.textContent = "Hours of Operation: No posted hours, contact restaurant for hours" }
+    
+
+    //separates and creates list elements in note section------------------
+
+    data.notes.forEach(element => {
+        commentSection.innerHTML += `<li>${element}</li>`
+    })
+
+
     placeMarker(data.address)
 }
-
 getRestData(id)
 
 
-
-//Creates the specific restaurant marker---------------------------------------------------
+//Creates the specific restaurant map marker---------------------------------------------------
 
 function placeMarker(address) {
     fetch(`https://nominatim.openstreetmap.org/search/?q=${address}&format=json`)
@@ -80,7 +95,6 @@ function placeMarker(address) {
             let lon = info.lon;
             L.marker([lat, lon]).addTo(myMap)
         })
-
 }
 placeMarker()
 

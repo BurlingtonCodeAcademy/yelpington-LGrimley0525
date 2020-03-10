@@ -1,6 +1,8 @@
 body{
   background-color: #0F8B8D;
 }
+
+/* Header CSS-------------------------------- */
 h1{
   font-size: 60px;
   font-family: 'Cuprum', sans-serif;
@@ -15,6 +17,9 @@ h2{
   z-index: 4;
 }
 
+#food-overlay{
+  background-image: linear-gradient(rgba(255, 250, 247, 0.9), rgba(255, 250, 247, 0.9)), url(Food.PNG);
+}
 
 /*General Page alignment*/
 .yelp{
@@ -39,35 +44,20 @@ h2{
   color: #143642;
   margin-bottom: 20px;
 }
+
 #main{
   grid-area: main;
   text-align: justify;
   border: 2px black;
   margin-top: 50px;
-  height: 639.75px;
-}
-
-#footer{
-  grid-area: footer;
-}
-
-#sidebarList{
-  grid-area: sidebarList;
-  text-align: center;
-  margin-top: 100px;
-  margin-left: 15px;
-  font-family: 'Monda', sans-serif;
-  border-radius: 20px;
-  background:#EC9A29;
-  color: #143642;
-  height: 85%;
-  width: 90%;
+  height: 95vh;
 }
 
 #commentSection{
   grid-area: commentSection;
   text-indent: 2.5%;
   text-align: left;
+  line-height: 28px;
   margin-top: 50px;
   font-family: 'Monda', sans-serif;
   border-radius: 20px;
@@ -89,7 +79,7 @@ h2{
   font-family: 'Monda', sans-serif;
   border-radius: 20px;
   margin-top: 50px;
-  margin-bottom: 23px;
+  height: 145px;
 }
 
 #drop-list{
@@ -97,15 +87,19 @@ h2{
   margin-bottom: 20px;
 }
 
-#post-list{
-  color: white;
+/* Sidebar List CSS--------------------------------------- */
+#sidebarList{
+  grid-area: sidebarList;
+  text-align: center;
+  margin-top: 100px;
+  margin-left: 15px;
   font-family: 'Monda', sans-serif;
+  border-radius: 20px;
+  background:#EC9A29;
+  color: #143642;
+  height: 92vh;
+  width: 90%;
 }
-
-#food-overlay{
-  background-image: linear-gradient(rgba(255, 250, 247, 0.9), rgba(255, 250, 247, 0.9)), url(Food.PNG);
-}
-
 #restName{ 
   font-size: 18px;
   font-weight: bolder;
@@ -128,22 +122,35 @@ h2{
   font-size: 16px;  
   font-weight: bolder;} 
 
+#hours{
+  text-align: left; 
+  margin-left: 10px; 
+  font-size: 16px;  
+  font-weight: bolder;
+}
+#website{
+  text-align: left; 
+  margin-left: 10px; 
+  font-size: 16px;  
+  font-weight: bolder;
+}
+
 /* nav bar CSS below--------------------------------*/
 a { 
   text-decoration: none;
 }
 
 nav {
-    display: flex;
-    justify-content: flex-end;
-    z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 2;
 }
 
 ul {
   background:#A8201A;
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
 }
 
 nav li {
@@ -205,6 +212,7 @@ ul li ul li {
   background-color:#143642;
   border-top: 1px solid rgb(122, 117, 117);
   box-shadow: 0 50vh 0 50vh #143642;
+  grid-area: footer;
 }
 
 h2#footer-title {
