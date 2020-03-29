@@ -22,18 +22,18 @@ h2{
   rgba(255, 250, 247, 0.9)), url(Food.PNG);
 }
 
-/*General Page alignment-----------------------------*/
+/*Main Page CSS --------------------------------*/
 
 .yelp{
   display:grid;
-  grid-gap: 0.5rem;
+  grid-gap: 1rem;
   width: 100%;
   height: 100%;
-  grid-template-columns: 5% 30% 30% 30% 5%;
+  grid-template-columns: 4% 30% 31% 30% 4%;
   grid-template-rows: 15% 70% 15%;
   grid-template-areas: 
   "header header header header navigation"
-  ". sidebarList main main ."
+  ". main main sidebarList ."
   "footer footer footer footer footer";
 }
 #header{
@@ -65,8 +65,12 @@ h2{
   grid-area: navigation;
   font-family: 'Monda', sans-serif;
   border-radius: 20px;
-  margin-top: 50px; 
-  height: 158px;
+  position: absolute;
+  top: 55px;
+  left: 5px;
+  height: 160px;
+  z-index: 100;
+
 }
 
 #drop-list{
@@ -96,6 +100,135 @@ li:focus-within {
   background:#A8201A;
   cursor: pointer;
 }
+
+/* Separate Restaurant Page Below---------------------------- */
+.restpage{
+  display:grid;
+  width: 100%;
+  height: 100%;
+  grid-gap: 1rem;
+  grid-template-columns: 5% 30% 30% 25% 10%;
+  grid-template-rows: 15% 50% 20% 15%;
+  grid-template-areas: 
+  ". header header header navigation "
+  ". main main sidebarList  ."
+  ". commentSection commentSection . ."
+  "footer footer footer footer footer";
+}
+#header{
+  grid-area: header;
+  align-items: center;
+  text-align: center;
+  border: 1px black;
+  border-color: #143642;
+  color: #143642;
+  margin-bottom: 20px;
+}
+
+#restpage-main{
+  grid-area: main;
+  text-align: justify;
+  border: 2px black;
+  margin-top: 50px;
+  height: 95%;
+  overflow: hidden;
+  border-radius: 20px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+#commentSection{
+  grid-area: commentSection;
+  text-indent: 2.5%;
+  text-align: left;
+  line-height: 28px;
+  margin-top: 65px;
+  font-family: 'Monda', sans-serif;
+  border-radius: 20px;
+  background:#DAD2D8;
+  color: #143642;
+  margin-bottom: 20px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+#restpage-map{
+  height: 100%;
+  z-index: 0;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+#restpage-navigation{
+  grid-area: navigation;
+  font-family: 'Monda', sans-serif;
+  border-radius: 20px;
+  margin-top: 48px;
+  margin-right: 150px; 
+  height: 160px;
+  z-index: 100;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-end: 5;
+}
+
+#drop-content{
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+/* Sidebar List CSS--------------------------------------- */
+#restpage-sidebarList{
+  grid-area: sidebarList;
+  text-align: center;
+  margin-top: 100px;
+  font-family: 'Monda', sans-serif;
+  border-radius: 20px;
+  background:#EC9A29;
+  color: #143642;
+  width: 100%;
+  height: 85%;
+  overflow: hidden;
+}
+#restpage-restName{ 
+  font-size: 18px;
+  font-weight: bolder;
+}
+#restpage-notes {  
+  text-align: left; 
+  margin-left: 10px; 
+  font-size: 16px; 
+  font-weight: bolder;
+} 
+#restpage-phone {  
+  text-align: left; 
+  margin-left: 10px; 
+  font-size: 16px;  
+  font-weight: bolder;
+} 
+#restpage-address{ 
+  text-align: left; 
+  margin-left: 10px; 
+  font-size: 16px;  
+  font-weight: bolder;} 
+
+#restpage-hours{
+  text-align: left; 
+  margin-left: 10px; 
+  font-size: 16px;  
+  font-weight: bolder;
+}
+#restpage-website{
+  text-align: left; 
+  margin-left: 10px; 
+  font-size: 16px;  
+  font-weight: bolder;
+}
+
+
 
 /* nav bar CSS below--------------------------------*/
 

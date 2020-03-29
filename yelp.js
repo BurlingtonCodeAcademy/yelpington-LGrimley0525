@@ -1,5 +1,5 @@
 //Setting map and selected tileLayer------------------------------------------------------------
-myMap = L.map("map").setView([44.4759, -73.2121], 16);
+myMap = L.map("restpage-map").setView([44.4759, -73.2121], 16);
 
 L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
     maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
@@ -45,11 +45,11 @@ let path = window.location.pathname
 let pathArray = path.split('/')
 let id = pathArray.pop()
 
-let notes = document.getElementById('notes')
-let phone = document.getElementById('phone')
-let address = document.getElementById('address')
-let name = document.getElementById('restName')
-let hours = document.getElementById('hours')
+let notes = document.getElementById('restpage-notes')
+let phone = document.getElementById('restpage-phone')
+let address = document.getElementById('restpage-address')
+let name = document.getElementById('restpage-restName')
+let hours = document.getElementById('restpage-hours')
 let commentSection = document.getElementById('commentSection')
 
 async function getRestData() {
@@ -64,6 +64,7 @@ async function getRestData() {
     commentSection.textContent = `COMMENTS ABOUT THE RESTAURANT:  `
     phone.textContent = `Call for Reservations or Questions: ${data.phone}`
     address.textContent = `Stop in at:  ${data.address}`
+    
 
     //ensure proper hour display if no hours listed------------------------ 
 
@@ -72,11 +73,11 @@ async function getRestData() {
     } else { hours.textContent = "Hours of Operation: No posted hours, contact restaurant for hours" }
     
 
-    //separates and creates list elements in note section------------------
+    //separates and creates list elements in restaurant note section------------------
 
-    data.notes.forEach(element => {
+     data.notes.forEach(element => {
         commentSection.innerHTML += `<li>${element}</li>`
-    })
+     })
 
 
     placeMarker(data.address)

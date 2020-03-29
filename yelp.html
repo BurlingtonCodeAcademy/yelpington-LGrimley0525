@@ -12,14 +12,14 @@
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
         integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
         crossorigin=""></script>
-    <link rel="stylesheet" href="../yelp.css">
     <link href="https://fonts.googleapis.com/css?family=Cuprum|Monda&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../main.css">
 </head>
 
 <body>
 
-    <div class="yelp">
+    <div class="restpage">
         <section id="header">
             <div id="food-overlay">
                 <div id="home-top">
@@ -32,7 +32,7 @@
                 </div>
             </div>
         </section>
-        <nav id="navigation">
+        <nav id="restpage-navigation">
             <ul>
                 <li> <a id="menu" href="../index.html">HOME </a></li>
                 <li> <a href="#">Restaurants</a>
@@ -40,23 +40,26 @@
                 </li>
             </ul>
         </nav>
-
-        <section id="main">
-            <div id='map'>
+<!-- Specific Rest Map ---------------------------------------->
+        <section id="restpage-main">
+            <div id="restpage-map">
             </div>
         </section>
-        <section id="sidebarList">
-            <div id="restName"><b></b></div><br />
-            <div id="notes">
-            </div><br />
-            <div id="phone"></div><br />
-            <div id="address"></div><br />
-            <div id="hours"></div>
-        </section>
 
+<!-- Sidebar List with Restaurant Info-------------------------->
+        <section id="restpage-sidebarList">
+            <div id="restpage-restName"><b></b></div><br />
+            <div id="restpage-phone"></div><br />
+            <div id="restpage-address"></div><br />
+            <div id="restpage-hours"></div><br />
+            <div id="restpage-notes">
+            </div>
+        </section>
+<!-- Separate Restaurant Comment Section ----------------------->
         <section id="commentSection"><br />
         </section>
 
+<!-- Footer Below on Every Page    ----------------------------->
         <section id="footer">
             <h2 id="footer-title">QUESTIONS OR COMMENTS? <b>GET IN TOUCH:</b></h2>
             <br />
