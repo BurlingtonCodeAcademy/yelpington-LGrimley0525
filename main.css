@@ -1,0 +1,500 @@
+body{
+  background-color: #0F8B8D;
+}
+
+/* Header CSS------------------------------------- */
+h1{
+  font-size: 60px;
+  font-family: 'Cuprum', sans-serif;
+  z-index: 5;
+  color: #143642;
+  text-shadow: 5px 5px #DAD2D8;
+}
+
+h2{
+  font-size: small;
+  font-family: 'Monda', sans-serif;
+  z-index: 4;
+}
+
+#food-overlay{
+  background-image: linear-gradient(rgba(255, 250, 247, 0.9),
+  rgba(255, 250, 247, 0.9)), url(Food.PNG);
+}
+
+/*Main Page CSS --------------------------------*/
+
+.yelp{
+  display:grid;
+  grid-gap: 1rem;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 4% 30% 31% 30% 4%;
+  grid-template-rows: 15% 70% 15%;
+  grid-template-areas: 
+  "header header header header navigation"
+  ". main main sidebarList ."
+  "footer footer footer footer footer";
+}
+#header{
+  grid-area: header;
+  align-items: center;
+  text-align: center;
+  border: 1px black;
+  border-color: #143642;
+  color: #143642;
+  margin-bottom: 20px;
+}
+
+#main{
+  grid-area: main;
+  text-align: justify;
+  border: 2px black;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  height:85%;
+}
+#map{
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+#navigation{
+  grid-area: navigation;
+  font-family: 'Monda', sans-serif;
+  border-radius: 20px;
+  position: absolute;
+  top: 55px;
+  left: 5px;
+  height: 160px;
+  z-index: 100;
+
+}
+
+#drop-list{
+  margin-top: 50px;
+}
+
+/* Sidebar CSS-------------------------------------------- */
+#sidebarList{
+  grid-area: sidebarList;
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Monda', sans-serif;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background-color:#EC9A29;
+  height: 85%;
+}
+#post-list{
+  color: white;
+  font-family: 'Monda', sans-serif;
+  background-color:#EC9A29;
+  border-radius: 20px;
+  height: 80%;
+}
+#post-list > li:hover,
+li:focus-within {
+  background:#A8201A;
+  cursor: pointer;
+}
+
+/* Separate Restaurant Page Below---------------------------- */
+.restpage{
+  display:grid;
+  width: 100%;
+  height: 100%;
+  grid-gap: 1rem;
+  grid-template-columns: 5% 30% 30% 25% 10%;
+  grid-template-rows: 15% 50% 20% 15%;
+  grid-template-areas: 
+  ". header header header navigation "
+  ". main main sidebarList  ."
+  ". commentSection commentSection . ."
+  "footer footer footer footer footer";
+}
+#header{
+  grid-area: header;
+  align-items: center;
+  text-align: center;
+  border: 1px black;
+  border-color: #143642;
+  color: #143642;
+  margin-bottom: 20px;
+}
+
+#restpage-main{
+  grid-area: main;
+  text-align: justify;
+  border: 2px black;
+  margin-top: 50px;
+  height: 95%;
+  overflow: hidden;
+  border-radius: 20px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+#commentSection{
+  grid-area: commentSection;
+  text-indent: 2.5%;
+  text-align: left;
+  line-height: 28px;
+  margin-top: 65px;
+  font-family: 'Monda', sans-serif;
+  border-radius: 20px;
+  background:#DAD2D8;
+  color: #143642;
+  margin-bottom: 20px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+#restpage-map{
+  height: 100%;
+  z-index: 0;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+#restpage-navigation{
+  grid-area: navigation;
+  font-family: 'Monda', sans-serif;
+  border-radius: 20px;
+  margin-top: 48px;
+  margin-right: 150px; 
+  height: 160px;
+  z-index: 100;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-end: 5;
+}
+
+#drop-content{
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+/* Sidebar List CSS--------------------------------------- */
+#restpage-sidebarList{
+  grid-area: sidebarList;
+  text-align: center;
+  margin-top: 100px;
+  font-family: 'Monda', sans-serif;
+  border-radius: 20px;
+  background:#EC9A29;
+  color: #143642;
+  width: 100%;
+  height: 85%;
+  overflow: hidden;
+}
+#restpage-restName{ 
+  font-size: 18px;
+  font-weight: bolder;
+}
+#restpage-notes {  
+  text-align: left; 
+  margin-left: 10px; 
+  font-size: 16px; 
+  font-weight: bolder;
+} 
+#restpage-phone {  
+  text-align: left; 
+  margin-left: 10px; 
+  font-size: 16px;  
+  font-weight: bolder;
+} 
+#restpage-address{ 
+  text-align: left; 
+  margin-left: 10px; 
+  font-size: 16px;  
+  font-weight: bolder;} 
+
+#restpage-hours{
+  text-align: left; 
+  margin-left: 10px; 
+  font-size: 16px;  
+  font-weight: bolder;
+}
+#restpage-website{
+  text-align: left; 
+  margin-left: 10px; 
+  font-size: 16px;  
+  font-weight: bolder;
+}
+
+
+
+/* nav bar CSS below--------------------------------*/
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  z-index: 2;
+}
+
+ul {
+  background:#A8201A;
+  list-style: none;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+nav li {
+  color: #fff;
+  background:#A8201A;
+  display: block;
+  float: center;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+  
+li a {
+  color: #fff;
+}
+
+li:hover,
+li:focus-within {
+    background:#EC9A29;
+    cursor: pointer;
+}
+
+li:focus-within a {
+  outline: none;
+}
+
+ul li ul {
+  background: #A8201A;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+  position: absolute;
+  transition: all 0.5s ease-in;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover,
+ul li ul:focus {
+  visibility: visible;
+  opacity: 1;
+  display: block
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}
+
+/* footer CSS Below ---------------------------------*/
+
+#footer {
+  grid-area: footer;
+  margin: 1em 0 0 0;
+  padding: 1em;
+  background-color:#143642;
+  border-top: 1px solid rgb(122, 117, 117);
+  box-shadow: 0 50vh 0 50vh #143642;
+}
+
+h2#footer-title {
+  text-align: center;
+  margin: 5vh auto 3vh auto;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 5px;
+  color: whitesmoke;
+}
+
+div#form-space {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+div#form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-gap: 0.5em;
+  grid-template-areas: "  customer-name      customer-email" "  customer-message   customer-message" "  send-button        . ";
+  margin: 1em;
+  width: 42.5vw;
+}
+
+#customer-name {
+  grid-area: customer-name;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 10px;
+  padding-left: 10px;
+  background-color: #DAD2D8;
+}
+
+#customer-name:focus {
+  background-color: whitesmoke;
+}
+
+#customer-email {
+  grid-area: customer-email;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 10px;
+  padding-left: 10px;
+  background-color: #DAD2D8;
+}
+
+#customer-email:focus {
+  background-color: whitesmoke;
+}
+
+#customer-message {
+  grid-area: customer-message;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  background-color: #DAD2D8;
+}
+
+#customer-message:focus {
+  background-color: whitesmoke;
+}
+
+#contact-info {
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "contact-text   contact-text" "contact-text   contact-text" "   address     twitter" "   address     instagram" "phonenumber   dribbble" " email         facebook";
+  width: 41vw;
+  color: whitesmoke;
+}
+
+div#contact-info>li {
+  font-size: 12px;
+}
+
+div#contact-info>p {
+  font-size: 12px;
+}
+
+#contact-text {
+  grid-area: contact-text;
+}
+
+#message-button {
+  grid-area: send-button;
+  border-radius: 6px;
+  margin: 0;
+  background-color: #EC9A29;
+  color: white;
+}
+
+#address {
+  grid-area: address
+}
+
+#phonenumber {
+  grid-area: phonenumber
+}
+
+#email {
+  grid-area: email
+}
+
+#twitter {
+  grid-area: twitter
+}
+
+#instagram {
+  grid-area: instagram
+}
+
+#dribbble {
+  grid-area: dribbble
+}
+
+#facebook {
+  grid-area: facebook
+}
+
+#contact-info li {
+  list-style-type: none;
+}
+
+.fa {
+  padding: 5px;
+  font-size: 10px;
+  width: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 85%;
+}
+
+/*Hover effect on social media icons-----------------------------------*/
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+/*   social media and contact icon CSS below ----------------------------*/
+
+/* Facebook */
+
+.fa-facebook {
+  background: grey;
+  color: white;
+}
+
+/* Twitter */
+
+.fa-twitter {
+  background: grey;
+  color: white;
+}
+
+/* Dribbble*/
+
+.fa-dribbble {
+  background: grey;
+  color: white;
+}
+
+/* Instagram */
+
+.fa-instagram {
+  background: gray;
+  color: white;
+}
+
+/* Email */
+
+.fa-envelope-square {
+  background: grey;
+  color: white;
+}
+
+/* Phone */
+
+.fa-phone {
+  background: grey;
+  color: white;
+}
+
+/* Address */
+
+.fa-home {
+  background: grey;
+  color: white;
+}

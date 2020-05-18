@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum|Monda&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../main.css">
+</head>
+
+<body>
+
+    <div class="restpage">
+        <section id="header">
+            <div id="food-overlay">
+                <div id="home-top">
+                    <header>
+                        <a href="../index.html">
+                            <h1> YELP....ington!</h1>
+                        </a>
+                        <h2> For When You Feel Yourself Getting Hangry...</h2>
+                    </header>
+                </div>
+            </div>
+        </section>
+        <nav id="restpage-navigation">
+            <ul>
+                <li> <a id="menu" href="../index.html">HOME </a></li>
+                <li> <a href="#">Restaurants</a>
+                    <ul id="drop-content"></ul>
+                </li>
+            </ul>
+        </nav>
+<!-- Specific Rest Map ---------------------------------------->
+        <section id="restpage-main">
+            <div id="restpage-map">
+            </div>
+        </section>
+
+<!-- Sidebar List with Restaurant Info-------------------------->
+        <section id="restpage-sidebarList">
+            <div id="restpage-restName"><b></b></div><br />
+            <div id="restpage-phone"></div><br />
+            <div id="restpage-address"></div><br />
+            <div id="restpage-hours"></div><br />
+            <div id="restpage-notes">
+            </div>
+        </section>
+<!-- Separate Restaurant Comment Section ----------------------->
+        <section id="commentSection"><br />
+        </section>
+
+<!-- Footer Below on Every Page    ----------------------------->
+        <section id="footer">
+            <h2 id="footer-title">QUESTIONS OR COMMENTS? <b>GET IN TOUCH:</b></h2>
+            <br />
+            <div id="form-space">
+                <div id="form">
+                    <input type="text" name="name" id="customer-name" placeholder="Name" />
+                    <input type="text" name="email" id="customer-email" placeholder="Email" />
+                    <textarea name="message" id="customer-message" placeholder="Message"></textarea>
+                    <button type="button" id="message-button">SEND MESSAGE</button>
+                </div>
+
+                <div id="contact-info">
+                    <p id="contact-text">I'm baby offal marfa cold-pressed skateboard, seitan DIY fashion axe kale chips
+                        tote bag ugh. Swag 8-bit kogi, wayfarers hella raclette kombucha butcher pinterest try-hard man
+                        bun
+                        hammock. Letterpress raclette deep v typewriter fixie hexagon bespoke butcher craft beer disrupt
+                        banjo kinfolk gluten-free polaroid food truck.
+
+                    </p>
+                    <li id="address"><a href="#" class=" fa fa-home"></a>1234 Somewhere Road <br />Burlington, Vermont
+                        05401
+                        <br> USA
+                    </li>
+                    <li id="phonenumber"><a href="#" class="fa fa-phone"></a> 802.123.4567</li>
+                    <br>
+                    <li id="email"><a href="#" class="fa fa-envelope-square"></a>info@untitled.tdl</li>
+                    <li id="twitter"><a href="#" class="fa fa-twitter">
+                        </a>@untitled</li>
+                    <br>
+                    <li id="instagram"><a href="#" class="fa fa-instagram"></a>instagram.com</li>
+                    <br>
+                    <li id="dribbble"><a href="#" class="fa fa-dribbble"></a>dribbble.com</li>
+                    <br>
+                    <li id="facebook"><a href="#" class="fa fa-facebook"></a>facebook.com</li>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="../yelp.js"></script>
+</body>
+
+</html>
