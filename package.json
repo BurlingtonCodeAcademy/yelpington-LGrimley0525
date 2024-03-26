@@ -4,7 +4,7 @@
   "description": "In this project, you will pair up and work with other teams to create an online directory of restaurants in Burlington.",
   "main": "main.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.19.2"
   },
   "devDependencies": {},
   "scripts": {
